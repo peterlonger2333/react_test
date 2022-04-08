@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>comp3334nft</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/untitled.css">
 </head>
 
-<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg.jpg');border-color: var(--bs-blue);">
+<body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg.jpg');">
     <h1 class="text-center text-white d-none d-lg-block site-heading"><span style="font-size: 40px;color: var(--bs-white);"><br>&nbsp; &nbsp; &nbsp; &nbsp;NFT -Share your creative artwork !<br></span></h1>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark py-lg-4" id="mainNav">
         <div class="container">
@@ -32,44 +32,34 @@
                     <li class="nav-item"><a class="nav-link" href="browse.html">browse</a></li>
                     <li class="nav-item"><a class="nav-link" href="me.html">me</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="upload.html">upload</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="page-section clearfix">
-        <div class="container">
-            <div class="intro"><img class="img-fluid intro-img mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg">
-                <div class="text-center intro-text p-5 rounded bg-faded">
-                    <h2 class="section-heading mb-4"><span class="section-heading-lower"></span></h2>
-                    <p class="mb-3">NFT represents the Non-Fungible Token,which is a special form of cryptocurrency.<br>All the artwork,&nbsp; book text, music or video even digital collectibles and online games can be verified by NFT's special certification methods to verify their unique value.</p>
-                    <div class="mx-auto intro-button"></div>
-                </div>
+    <section class="swap1" style="width:550px;height:650px; float:left; display:inline;margin-left:100px;margin-top:100px;margin-right:20px;margin-bottom:20px;">
+        <div class="container left" id="left">
+            <div class="left">
+                <div class="d-flex product-item-title"></div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" src="assets/img/browse-1.jpg" style="height:300px;">
+                <div class="bg-faded p-5 rounded" style="height:75px;"><form><label class="form-label">Maker token ID:&nbsp;</label><input type="text" placeholder="Token ID in the NFT contract" id="maker"><input type="button" name="button" value="submit" onclick="print()" /></form></div>
             </div>
         </div>
     </section>
-    <section class="bg-secondary page-section cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <div class="text-center cta-inner rounded">
-                        <h2 class="section-heading mb-4"><span class="section-heading-upper">Our Promise</span><span class="section-heading-lower">To You</span></h2>
-                        <p class="mb-0">We try to provide services that satisfies you.We protect your data and privacy.</p>
-                    </div>
-                </div>
+    <section class="swap2" style="width:550px; height:650px; float:right; display:inline;margin-top:100px;margin-left:20px;margin-right:100px">
+        <div class="container right" id="right">
+            <div class="right">
+                <div class="d-flex product-item-title"></div><img class="img-fluid d-flex mx-auto image1" src="assets/img/browse-2.jpg" style="height: 300px;">
+                <div class="bg-faded p-5 rounded" style="height:75px;"><form><label class="form-label">Taker token ID:&nbsp;</label><input type="text" placeholder="Token ID in the NFT contract" id="taker"><input type="button" name="button" value="submit" onclick="print()" /></form></div>
             </div>
         </div>
-    </section>
-    <footer class="text-center footer text-faded py-5">
-        <div class="container footer">
-            <p class="m-0 small">Copyright&nbsp;© NFT platform</p>
-        </div>
-    </footer>
+    </section><button class="btn btn-primary" type="button" style="margin-top:-450px;margin-left:-45px;">Make Swap</button>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/current-day.js"></script>
     <script src="assets/js/Drag-and-Drop-Multiple-File-Form-Input-upload-Advanced.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="assets/js/Taker.js"></script>
+    <script src="assets/js/Maker.js"></script>
 </body>
 
 </html>

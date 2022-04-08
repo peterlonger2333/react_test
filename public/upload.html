@@ -55,15 +55,15 @@
                     <tbody>
                         <tr>
                             <td>Maker Name</td>
-                            <td><input type="text" style="width: 200px;;"></td>
+                            <td><input type="text" style="width: 200px;;" id="makerName"></td>
                         </tr>
                         <tr>
                             <td>Artwork Name</td>
-                            <td><input type="text" style="width: 200px;;"></td>
+                            <td><input type="text" style="width: 200px;;" id="artName"></td>
                         </tr>
                         <tr>
                             <td>Create Time</td>
-                            <td><input type="date" style="width: 200px;;"></td>
+                            <td><input type="date" style="width: 200px;;" id="time"></td>
                         </tr>
                         <tr>
                             <td>Description</td>
@@ -84,31 +84,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/current-day.js"></script>
     <script src="assets/js/Drag-and-Drop-Multiple-File-Form-Input-upload-Advanced.js"></script>
-        <script>
-        function upload()
-        {
-            var up_file = $('#form-files').files[0];//找到id为file的组件，当然这里是input组件
-            var description = $('#description');
-            var formData = new FormData();//新建一个formdata用于存储数据
-            formData.append("up_file",up_file);//将选择的文件添加到formdata中
-            formData.append("description",description);
-            $("#upload").html(target)
-            $.ajax
-            ({
-                url:'http://127.0.0.1:5000/upload',
-                dataType:'json',
-                type:'POST',
-                async: true,
-                data: formData,
-                processData : false, // 使数据不做处理
-                contentType : false, // 不要设置Content-Type请求头
-                success: function(data) {
-                    var params = JSON.parse(data)
-                    $("#img").attr("src", params);
-                },
-            });
-        }
-    </script>
+    <script src="assets/js/Upload.js"></script>
 </body>
 
 </html>

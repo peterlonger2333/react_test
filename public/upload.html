@@ -10,18 +10,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/card-3-column-animation-shadows-images.css">
     <link rel="stylesheet" href="assets/css/CCS-RecordForm.css">
     <link rel="stylesheet" href="assets/css/Drag-and-Drop-Multiple-File-Form-Input-upload-Advanced.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/Ludens-Users---3-Profile.css">
     <link rel="stylesheet" href="assets/css/some-message.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
 </head>
 
-<body>
+<body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg.jpg');">
     <h1 class="text-center text-white d-none d-lg-block site-heading"><span style="font-size: 40px;color: var(--bs-white);"><br>&nbsp; &nbsp; &nbsp; &nbsp;NFT -Share your creative artwork !<br></span></h1>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark py-lg-4" id="mainNav">
         <div class="container">
@@ -32,7 +30,6 @@
                     <li class="nav-item"><a class="nav-link" href="browse.html">browse</a></li>
                     <li class="nav-item"><a class="nav-link" href="me.html">me</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="upload.html">upload</a></li>
                 </ul>
             </div>
         </div>
@@ -46,21 +43,48 @@
         <div class="bg-light border rounded border-light pt-1 jumbotron py-5 px-4">
             <div class="alert alert-success invisible mt-5" role="alert"><span id="notify"></span></div>
             <h1>File Drop<br></h1>
-            <p><label class="form-label" for="form-files"><a class="btn btn-secondary btn-sm" role="button">Choose Files</a></label>&nbsp<br></p>
-            <p>Description:</p><input type="text" id="description">
-            <p id="filecount"><br></p>
-            <div id="list"></div>
-            <form action="" enctype="multipart/form-data"><input class="form-control invisible" type="file" id="form-files" name="files" multiple="multiple" accept="image/png, image/jpeg, image/gif, image/jpg"><button class="btn btn-outline-primary d-block w-100" type="submit" onclick="submitImg()">Submit</button><button class="btn btn-danger mt-5" type="reset" onclick="clearFiles()">Reset</button></form>
+            <p><label class="form-label" for="form-files"><a class="btn btn-secondary btn-sm" role="button">Choose Files</a></label>&nbsp;or drag the files to anywhere on this page.<br></p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Information</th>
+                            <th style="text-align: left;font-size: 16px;;">Please fill in the blanks...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maker Name</td>
+                            <td><input type="text" style="width: 200px;;"></td>
+                        </tr>
+                        <tr>
+                            <td>Artwork Name</td>
+                            <td><input type="text" style="width: 200px;;"></td>
+                        </tr>
+                        <tr>
+                            <td>Create Time</td>
+                            <td><input type="date" style="width: 200px;;"></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td><input type="text" style="height: 100px;width: 300px;;" id="description"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <form action="" enctype="multipart/form-data"><input class="form-control invisible" type="file" id="form-files" name="files" multiple=""><button class="btn btn-outline-primary d-block w-100" type="submit" onclick="document.location=&#39;me.html&#39;">Submit</button><button class="btn btn-danger mt-5" type="reset" onclick="clearFiles()">Reset</button></form>
         </div>
-        <div class="text-center bg-light border rounded border-dark shadow-lg p-3"><img id="image_preview" width="100">
-            <div><button class="btn btn-warning btn-sm m-3" onclick="previewClose()">Close</button></div>
+        <div class="text-center bg-light border rounded border-dark shadow-lg p-3">
+            <div class="row">
+                <div class="col"><small class="form-text">The Artwork is shown below:</small></div>
+            </div>
+            <div><img id="image_preview" width="100"></div><button class="btn btn-warning btn-sm m-3" onclick="previewClose()">Close</button>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/current-day.js"></script>
     <script src="assets/js/Drag-and-Drop-Multiple-File-Form-Input-upload-Advanced.js"></script>
-    <script>
+        <script>
         function upload()
         {
             var up_file = $('#form-files').files[0];//找到id为file的组件，当然这里是input组件
@@ -68,7 +92,7 @@
             var formData = new FormData();//新建一个formdata用于存储数据
             formData.append("up_file",up_file);//将选择的文件添加到formdata中
             formData.append("description",description);
-             $("#upload").html(target)
+            $("#upload").html(target)
             $.ajax
             ({
                 url:'http://127.0.0.1:5000/upload',

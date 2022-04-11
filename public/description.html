@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/card-3-column-animation-shadows-images.css">
     <link rel="stylesheet" href="assets/css/CCS-RecordForm.css">
     <link rel="stylesheet" href="assets/css/Drag-and-Drop-Multiple-File-Form-Input-upload-Advanced.css">
@@ -29,25 +27,32 @@
                     <li class="nav-item"><a class="nav-link" href="swap.html">swap</a></li>
                     <li class="nav-item"><a class="nav-link" href="browse.html">browse</a></li>
                     <li class="nav-item"><a class="nav-link" href="me.html">me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="descrip" style="width:600px;height:650px; float:left; display:inline;margin-left:350px;margin-top:100px;">
-        <div class="container descrip">
-            <div class="description">
-                <div class="d-flex product-item-title"></div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" src="assets/img/browse-1.jpg" style="height:400px;">
-                <div class="bg-faded p-5 rounded" style="height: 300px;line-height: 30px;">
-                    <label class="form-label" style="font-size: 15px;line-height: 22px;">Artwork Name:&nbsp;&nbsp;<input type="text" style="line-height: 18px;font-size: 12px;letter-spacing: 1px;"id="Name"></label>
-                    <label class="form-label" style="font-size: 15px;line-height: 22px;">Token ID:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<input type="text" style="font-size: 12px;line-height: 18px;"id="ID"></label>
-                    <label class="form-label" style="font-size: 15px;line-height: 22px;">Maker:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" style="font-size: 12px;line-height: 18px;"id="Maker"></label>
-                    <label class="form-label" style="font-size: 15px;line-height: 22px;">Create Time:&nbsp; &nbsp; &nbsp;&nbsp;<input type="text" style="font-size: 12px;line-height: 18px;",id="Time"></label>
-                    <label class="form-label" style="font-size: 15px;line-height: 22px;">Description:&nbsp; &nbsp; &nbsp; &nbsp;<input type="text" style="font-size: 12px;line-height: 40px;text-align: justify;width: 200px;height: 80px;"id="Description"><input type="button" name="button" value="submit" onclick="print()" /></label>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="table-responsive" style="border:0px;border-collapse:collapse;margin:50px;">
+        <table class="table" align="center;">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody style="border:0px;border-collapse:collapse;">
+                <tr>
+                    <td align="center;" width="55%;" style="border:0px;border-collapse:collapse;"><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" src="assets/img/browse-1.jpg" style="height:450px;"></td>
+                    <td align="center;" width="45%;" style="border:0px;border-collapse:collapse;">
+                        <div class="bg-faded p-5 rounded" style="height: 450px;line-height: 30px;font-size: 20px;">
+                            <p style="font-size: 20px;;">Artwork Name:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...<br></p>
+                            <p style="font-size: 20px;"><br>Token ID:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...&nbsp; &nbsp; &nbsp;<br><br></p>
+                            <p>Maker:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...<br><br></p>
+                            <p style="font-size: 20px;">Create Time:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</p>
+                            <p></p>
+                            <p><br>Description:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...&nbsp; &nbsp; &nbsp;<br></p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/current-day.js"></script>
     <script src="assets/js/Drag-and-Drop-Multiple-File-Form-Input-upload-Advanced.js"></script>

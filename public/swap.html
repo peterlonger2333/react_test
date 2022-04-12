@@ -40,15 +40,15 @@
             </thead>
             <tbody style="border:0px;border-collapse:collapse;">
                 <tr>
-                    <td align="right" style="border:0px;border-collapse:collapse;"><img src="assets/img/browse-1.jpg" style="width:400px;height:400px;"></td>
-                    <td style="border:0px;border-collapse:collapse;"><img src="assets/img/browse-2.jpg" style="width:400px;height:400px;" align="left;"></td>
+                    <td align="right" style="border:0px;border-collapse:collapse;"><img src="assets/img/browse-1.jpg" style="width:500px;height:500px;"></td>
+                    <td style="border:0px;border-collapse:collapse;"><img src="assets/img/browse-2.jpg" style="width:500px;height:500px;" align="left;"></td>
                 </tr>
                 <tr>
                     <td align="right" style="border:0px;border-collapse:collapse;">
-                        <div class="bg-faded p-5 rounded" style="height:100px;width:400px;"><label class="form-label" style="font-size: 15px;line-height: 22px;">Token ID:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<input type="text" style="font-size: 12px;line-height: 18px;"></label></div>
+                        <div class="bg-faded p-5 rounded" style="height:100px;width:500px;"><label class="form-label" style="font-size: 15px;line-height: 22px;">Maker Token ID:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<input type="text" style="font-size: 12px;line-height: 18px;" id="maker"><input type="button" value="search" onclick="makerprint()"/></label></div>
                     </td>
                     <td align="left" style="border:0px;border-collapse:collapse;">
-                        <div class="bg-faded p-5 rounded" style="height:100px;width:400px;"><label class="form-label" style="font-size: 15px;line-height: 22px;">Token ID:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<input type="text" style="font-size: 12px;line-height: 18px;"></label></div>
+                        <div class="bg-faded p-5 rounded" style="height:100px;width:500px;"><label class="form-label" style="font-size: 15px;line-height: 22px;">Taker Token ID:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<input type="text" style="font-size: 12px;line-height: 18px;" id="taker"><input type="button" value="search" onclick="takerprint()"/></label></div>
                     </td>
                 </tr>
             </tbody>
@@ -60,6 +60,7 @@
     <script src="assets/js/Drag-and-Drop-Multiple-File-Form-Input-upload-Advanced.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="assets/js/Taker.js"></script>
     <script src="assets/js/Maker.js"></script>
     <script src="assets/js/Swap.js"></script>

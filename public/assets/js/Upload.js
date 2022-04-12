@@ -1,3 +1,51 @@
+// import entire SDK
+var AWS = require('aws-sdk');
+// import AWS object without services
+//var AWS = require('aws-sdk/global');
+// import individual service
+var S3 = require('aws-sdk/clients/s3');
+const ID = 'AKIAZEIS6SKBWL4GVBRP';
+const SECRET = '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';
+
+// The name of the bucket that you have created
+const BUCKET_NAME = 'amplify-reactamplified-dev-180456-deployment1';
+const s3 = new AWS.S3({
+    accessKeyId: ID,
+    secretAccessKey: SECRET
+});
+const params = {
+    Bucket: BUCKET_NAME,
+    CreateBucketConfiguration: {
+        // Set your region here
+        LocationConstraint: "ap-northeast-1"
+    }
+};
+
+s3.createBucket(params, function(err, data) {
+    if (err) console.log(err, err.stack);
+    else console.log('Bucket Created Successfully', data.Location);
+});
+
+const fs = require('fs');
+const uploadFile = (fileName) => {
+    // Read content from the file
+    const fileContent = fs.readFileSync(fileName);
+    // Setting up S3 upload parameters
+    const params = {
+        Bucket: BUCKET_NAME,
+        Key: fileName, // File name you want to save as in S3
+        Body: fileContent
+    };
+
+    // Uploading files to the bucket
+    s3.getSignedUrl('getObject',params, function(err) {
+        if (err) {
+            throw err;
+        }
+        console.log('File uploaded successfully. The URL is', url);
+    });
+};
+
 function upload()
 {
     var up_file = $('#form-files').files[0];//找到id为file的组件，当然这里是input组件

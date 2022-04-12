@@ -31,8 +31,33 @@
 // //   document.getElementById('token')
 // // );
 
-function print(){
+
+import axios from 'axios';
+
+
+
+export function takerprint(){
 	var a=document.getElementById("taker").value;
 	alert(a);
 }
+
+
+export function getImage(){
+	var id=document.getElementById("taker").value;
+	axios.get('/artwork/{%s}',id)
+		.then(function (response) {
+			console.log(response);
+			var obj=JSON.parse(response)
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+	var img=obj.imageUrl;
+}
+ReactDOM.render(
+	// Try changing to isLoggedIn={true}:
+	<Greeting isLoggedIn={false} />,
+	document.getElementById('root')
+);
+
 
